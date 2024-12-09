@@ -1,0 +1,123 @@
+@use "variables" as *;
+
+.chart-container{
+  background: $white-color;
+  padding: 0 0 20px;
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .custom-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .el-form-item {
+      margin-right: 0;
+
+      :deep(.el-form-item__content) {
+        .el-input {
+          width: 186px;
+          height: 40px;
+
+          &:first-child {
+            margin-right: 12px;
+          }
+        }
+      }
+
+      :deep(.el-form-item__label) {
+        width: 79px !important;
+        line-height: 40px;
+      }
+    }
+
+    .custom-form-color {
+      :deep(.el-form-item__content) {
+        display: flex;
+        .color {
+          display: flex;
+          align-items: center;
+          margin-right: 24px;
+
+          .custom-color {
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  :deep(.custom-table) {
+    .el-table__body-wrapper {
+      .custom-column {
+        background-color: #ecf5ff;
+        color: #000000cc;
+        border-color: #dcdfe6;
+      }
+    }
+  }
+
+  .export {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+}
+
+:deep(.el-radio-button) {
+  padding: 2px 4px;
+  background-color: $gray-90;
+}
+
+:deep(.el-radio-button__original-radio:checked + .el-radio-button__inner) {
+  box-shadow: 0 0 0 0
+  var(--el-radio-button-checked-border-color, var(--el-color-primary));
+}
+
+:deep(.el-radio-button:first-child) {
+  border-radius: 4px 0 0 4px;
+
+  .el-radio-button__inner {
+    box-shadow: white;
+    border-right: 2px;
+    border-radius: 2px;
+    border-left: 0;
+  }
+}
+
+:deep(.el-radio-button:last-child) {
+  border-radius: 0 4px 4px 0;
+
+  .el-radio-button__inner {
+    box-shadow: white;
+    border-right: 2px;
+    border-radius: 2px;
+    border-left: 0;
+  }
+}
+
+:deep(.el-radio-button__inner) {
+  background-color: $gray-90;
+  color: $black-80;
+  border: 0;
+}
+
+:deep(.is-active) {
+  .el-radio-button__inner {
+    background-color: $white-color;
+    color: $black-80;
+    border-color: $white-color;
+    border-radius: 2px;
+  }
+}
+

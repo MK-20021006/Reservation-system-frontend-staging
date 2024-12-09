@@ -1,0 +1,89 @@
+@use "../../../shared/assets/scss/variables.scss";
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+@import "variables";
+@import "element-ui";
+@import "generate";
+
+body {
+  color: $black-80;
+  font-size: $primary-font-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: variables.$fontFamily;
+}
+
+a{
+  color: #0052D9;
+
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
+#main-store-layout {
+  color: $black-80;
+  font-size: $primary-font-size;
+  line-height: 22px;
+  font-weight: 400;
+  word-break: break-word;
+  font-family: variables.$fontFamily;
+}
+
+.el-message--error {
+  z-index: 5000;
+}
+
+.el-table .cell, .el-table .ellipsis{
+  display: -webkit-box;
+  word-break: break-all;
+  white-space: pre-wrap;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+
+.deadline-booking {
+  display: flex;
+
+  .max-24h {
+    padding-left: 10px;
+  }
+}
+
+
+.time-setting-booking {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .el-select {
+    width: 20% !important;
+    margin-right: 8px;
+    height: 40px;
+
+    .el-input {
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  .text-hour,
+  .text-day {
+    margin-right: 18px;
+  }
+}
+
+.input-date-update {
+  height: 40px;
+}

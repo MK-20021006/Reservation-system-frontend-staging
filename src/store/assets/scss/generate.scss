@@ -1,0 +1,46 @@
+@use "../../../shared/assets/scss/variables.scss";
+
+* {
+  @apply m-0 p-0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $primary-dark-text-color;
+  font-size: $primary-font-size;
+  height: 100%;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: variables.$fontFamily;
+}
+input:focus {
+  outline: none;
+}
+
+input::-webkit-input-placeholder, input:-ms-input-placeholder, input::-moz-placeholder {
+  color: #7d7d7d;
+  @apply font-normal;
+  font-size: $primary-font-size;
+}
+
+.line-1,
+.line-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  @apply overflow-hidden;
+  text-overflow: ellipsis;
+}
+
+.line-1 {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  @apply overflow-hidden;
+}
+
+.text-break {
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}

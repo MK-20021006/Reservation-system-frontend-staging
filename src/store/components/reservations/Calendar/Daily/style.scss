@@ -1,0 +1,158 @@
+@use "../../../../assets/scss/variables.scss";
+
+$widthFirstColumn: 170px;
+$paddingYFirstColumn: 16px;
+$paddingXFirstColumn: 12px;
+$paddingFirstColumn: $paddingYFirstColumn $paddingXFirstColumn;
+$minWidthMinuteSpace: 46px;
+
+.daily-calendar {
+  width: 100%;
+
+  .el-scrollbar {
+    :deep() {
+      .el-scrollbar__wrap {
+        .el-scrollbar__view {
+          position: relative;
+          display: grid;
+
+          & > div {
+            display: content;
+          }
+
+          .hours-in-day {
+            position: sticky;
+            top: 0px;
+            z-index: 3;
+            background-color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            height: 48px;
+
+            .hour {
+              background-color: white;
+              flex-grow: 1;
+              flex-shrink: 1;
+              border: 1px solid variables.$border-color;
+              padding: $paddingFirstColumn;
+              font-weight: 500;
+              background-color: variables.$gray-500;
+
+              &__title {
+                min-width: $widthFirstColumn;
+              }
+
+              &__value {
+                min-width: calc($minWidthMinuteSpace * 4);
+                text-align: center;
+              }
+
+              &:first-child {
+                position: sticky;
+                left: 0px;
+                z-index: 2;
+              }
+            }
+          }
+
+          .number_of_reversion {
+            position: sticky;
+            top: 48px;
+            z-index: 3;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 48px;
+            width: 100%;
+            background-color: variables.$gray-500;
+
+            .number {
+              background-color: variables.$gray-500;
+              flex-grow: 1;
+              flex-shrink: 1;
+              display: flex;
+              height: 100%;
+
+              &__title {
+                min-width: $widthFirstColumn;
+                padding: $paddingFirstColumn;
+                border: 1px solid variables.$border-color;
+              }
+
+              &__value {
+                height: 100%;
+                min-width: calc($minWidthMinuteSpace * 4);
+                text-align: center;
+
+                .part {
+                  border: 1px solid variables.$border-color;
+                  min-width: 46px;
+                  height: 100%;
+                  width: 50%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
+
+              &:first-child {
+                position: sticky;
+                left: 0px;
+                z-index: 2;
+              }
+            }
+          }
+
+          .number_of_available_reservation {
+            position: sticky;
+            top: calc(48px + 48px);
+            z-index: 3;
+            background-color: variables.$gray-500;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 48px;
+            width: 100%;
+
+            .number {
+              background-color: variables.$gray-500;
+              flex-grow: 1;
+              flex-shrink: 1;
+              display: flex;
+              height: 100%;
+
+              &__title {
+                min-width: $widthFirstColumn;
+                padding: $paddingFirstColumn;
+                border: 1px solid variables.$border-color;
+              }
+
+              &__value {
+                height: 100%;
+                min-width: calc($minWidthMinuteSpace * 4);
+                text-align: center;
+                .part {
+                  border: 1px solid variables.$border-color;
+                  min-width: 46px;
+                  height: 100%;
+                  width: 50%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
+
+              &:first-child {
+                position: sticky;
+                left: 0px;
+                z-index: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

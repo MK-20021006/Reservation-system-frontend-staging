@@ -1,0 +1,178 @@
+$--color-success: $green-color !default;
+$--color-warning: $warning-color !default;
+$--color-danger: $danger-color !default;
+$--color-info: $info-color !default;
+$--input-focus-border: $focus-border !default;
+$--input-focus-border: $focus-border !default;
+$--color-primary: $primary-background-color !default;
+
+/* icon font path, required */
+
+$colors: (
+  'primary': (
+    'base': #ff8900,
+  ),
+  'success': (
+    'base': #13ce66,
+  ),
+  'warning': (
+    'base': #ffba00,
+  ),
+  'danger': (
+    'base': #ff4949,
+  ),
+  'error': (
+    'base': #db2828,
+  ),
+  'info': (
+    'base': #42b8dd,
+  ),
+);
+$--font-path: "~element-plus/theme-chalk/fonts";
+@import "../../../../node_modules/element-plus/theme-chalk/src/index";
+
+
+.el-button:hover,
+.el-button:focus {
+  border-color: $primary-background-color !important;
+}
+
+.error.dirty .el-input__inner {
+  border-color: $danger-color !important;
+}
+
+.el-pagination {
+  @apply flex justify-center;
+  .el-pager li {
+    border-radius: 5px !important;
+  }
+}
+
+.border-none .el-input__inner,
+.border-none .el-input__inner:active,
+.border-none .el-input__inner:hover,
+.border-none .el-input__inner:focus {
+  border: none;
+}
+
+.el-icon-more {
+  transform: rotate(90deg);
+}
+
+.el-pager .el-icon-more {
+  transform: rotate(00deg) !important;
+}
+
+.dropdown-list .el-dropdown-menu__item {
+  @apply flex;
+  img {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: $grey-light-color;
+    color: $grey-color;
+  }
+
+  &.delete {
+    color: #ff5f5f;
+  }
+}
+
+.form-master-data .el-form-item.mb-0 {
+  margin-bottom: 0;
+}
+
+.form-master-data .el-checkbox__input.is-checked + .el-checkbox__label {
+  color: $grey-color;
+}
+
+.form-master-data .el-checkbox.is-disabled {
+  cursor: not-allowed;
+}
+
+.el-notification {
+  z-index: 2030 !important;
+}
+
+.el-notification__title {
+  white-space: pre-wrap;
+}
+
+.v-modal {
+  z-index: 950 !important;
+}
+
+.el-dropdown-menu__item.is-disabled {
+  opacity: 0.5;
+}
+
+.el-tooltip {
+  width: fit-content;
+}
+
+.el-tooltip.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+
+  img {
+    pointer-events: none;
+  }
+}
+
+.custom-form {
+
+}
+
+.el-form {
+  .is-required {
+    .el-form-item__label {
+      &:before {
+        content: "" !important;
+      }
+
+      &:after {
+        content: "*";
+        color: $red-color-medium;
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+.el-radio {
+  .el-radio__label {
+    color: $black-80;
+  }
+
+  &.is-checked {
+    .el-radio__input {
+      color: $grey-color;
+
+      .el-radio__inner {
+        width: 14px;
+        height: 14px;
+        border: none;
+
+        &:after {
+          width: 50%;
+          height: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+.el-checkbox {
+  &.is-checked {
+    .el-checkbox__label {
+      color: $black-80;
+    }
+  }
+}
+
+
+.el-textarea__inner {
+  color: $black-80;
+}

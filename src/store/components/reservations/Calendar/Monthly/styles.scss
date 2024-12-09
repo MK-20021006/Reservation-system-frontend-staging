@@ -1,0 +1,98 @@
+@use "../../../../assets/scss/variables.scss";
+
+.monthly-calendar {
+  width: 100%;
+
+  .day-of-week {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 8px;
+
+    .weekday {
+      width: calc(100% / 7);
+      text-align: center;
+      &.saturday,
+      &.sunday {
+        color: variables.$red-color;
+      }
+    }
+  }
+
+  .list-day {
+    height: calc(100% - 30px - 8px);
+    :deep() {
+      .el-scrollbar {
+        height: 100%;
+
+        .el-scrollbar__wrap {
+          height: 100%;
+
+          .el-scrollbar__view {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            .day {
+              width: calc(100% / 7);
+              min-height: 133px;
+              border: 1px solid variables.$border-color;
+              padding: 12px 12px 12px 1px;
+
+              &.not-current-month {
+                background-color: variables.$gray-500;
+                .day__number {
+                  opacity: 0.8;
+                }
+              }
+
+              /*
+                Save the first priority of background color is booking-unavailable < today < booking-full
+              */
+              &.status-booking-unavailable {
+                background-color: variables.$gray-500;
+              }
+
+              &.today {
+                background-color: #b0c7dd78;
+              }
+
+              &.status-booking-full {
+                background-color: variables.$orange;
+              }
+
+              &__number {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin-bottom: 19px;
+              }
+
+              &__content {
+                margin-bottom: 13px;
+              }
+
+              &__icon {
+                height: 16px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                svg {
+                  height: 16px;
+                  width: 16px;
+                }
+              }
+            }
+
+            .max-booking {
+              background: #d70035;
+            }
+          }
+        }
+      }
+    }
+  }
+}

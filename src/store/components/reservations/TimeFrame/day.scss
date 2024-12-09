@@ -1,0 +1,101 @@
+.time-frame {
+  position: absolute;
+  width: 286px;
+  height: 72px;
+  background-color: #4397fa;
+  padding: 4px 8px;
+  color: white;
+  font-size: 14px;
+  z-index: 1;
+
+  .user-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .staff-number {
+    // NOTE: Salon not show staff number, because it's alway 1
+    display: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .tooltip {
+    padding: 8px;
+    position: absolute;
+    color: #000000cc;
+    background-color: #f8e5e7;
+    border-radius: 4px;
+    top: 0px;
+    // min-height: 132px;
+    min-width: 167px;
+    z-index: 9999;
+
+    &::before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      border-radius: 4px;
+      position: absolute;
+      top: 4px;
+    }
+
+    &.left {
+      left: 0px;
+      transform: translate(-105%, 5%);
+
+      &::before {
+        border-top: 5px solid transparent;
+        border-right: none;
+        border-bottom: 5px solid transparent;
+        border-left: 10px solid #f8e5e7;
+
+        right: -9px;
+      }
+    }
+
+    &.right {
+      right: 0px;
+      transform: translate(105%, 5%);
+
+      &::before {
+        border-top: 5px solid transparent;
+        border-right: 10px solid #f8e5e7;
+        border-bottom: 5px solid transparent;
+        border-left: none;
+        left: -9px;
+      }
+    }
+  }
+}
+
+.time-frame-tabelog {
+  background-color: #fc781d;
+}
+
+.time-frame-gurunavi {
+  background-color: #3F51B5;
+}
+
+.time-frame-pepper-gourmet {
+  background-color: #F44336;
+}
+
+.time-frame-pepper-beauty {
+  background-color: #d234eb;
+}
+
+.time-frame-google {
+  background-color: #03A9F4;
+}
+
+.max-booking {
+  background: #d70035;
+}
