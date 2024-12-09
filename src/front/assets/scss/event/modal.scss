@@ -1,0 +1,110 @@
+@use "../../../assets/scss/variables" as *;
+@use "element-plus/theme-chalk/src/common/var.scss" as *;
+@use "element-plus/theme-chalk/src/mixins/mixins" as *;
+
+:deep(.el-dialog) {
+  width: 680px;
+}
+
+:deep(.el-overlay) {
+  .el-overlay-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+:deep(.el-dialog__body) {
+
+  .show-time {
+    width: 100%;
+    color: $black-color;
+
+    .header {
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 12px 0;
+      border-top: 1px solid #e4e7ed;
+    }
+
+    .header,
+    .content {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .time {
+        width: calc(40% - 45px);
+      }
+
+      .fee {
+        width: calc(35% - 30px);
+      }
+
+      .flex-end {
+        text-align: right;
+      }
+
+      .people {
+        width: 75px;
+      }
+
+      .action {
+        width: 25%;
+        text-align: center;
+      }
+
+      .flex-center {
+        display: flex;
+        justify-content: center;
+      }
+
+      .action-mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+:deep(.el-dialog__header) {
+  .el-dialog__headerbtn {
+    top: 0;
+  }
+}
+
+@include res("xs-only", $breakpoints-spec) {
+  :deep(.el-dialog) {
+    width: 90% !important;
+  }
+
+  :deep(.el-dialog__body) {
+    .show-time {
+      .header,
+      .content {
+        .action-mobile {
+          display: unset;
+        }
+
+        .action-pc {
+          display: none;
+        }
+
+        .time {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .fee {
+         .detail {
+           display: flex;
+           flex-wrap: wrap;
+
+         }
+        }
+      }
+    }
+  }
+}

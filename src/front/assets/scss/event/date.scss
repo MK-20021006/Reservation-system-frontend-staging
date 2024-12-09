@@ -1,0 +1,117 @@
+@use "../../../assets/scss/variables.scss" as *;
+@use "element-plus/theme-chalk/src/common/var.scss" as *;
+@use "element-plus/theme-chalk/src/mixins/mixins" as *;
+
+:deep(.input-date-event) {
+  display: none;
+}
+
+:deep(.custom-popper-date-event) {
+  position: unset !important;
+  display: block !important;
+  background: unset !important;
+  box-shadow: unset !important;
+  border: unset !important;
+  z-index: unset !important;
+
+  .el-date-picker {
+    width: 100%;
+    max-width: 560px;
+    margin: auto;
+
+    .el-picker-panel__body-wrapper {
+      border: 1px solid #E4E7ED;
+      border-radius: 3px;
+
+      .el-picker-panel__body {
+        .el-date-picker__header {
+          margin: 0;
+          padding: 10px;
+          font-weight: 700;
+
+          .el-date-picker__header-label {
+            cursor: unset;
+            font-weight: 700;
+            color: $black-color;
+          }
+        }
+
+        .el-picker-panel__content {
+          width: 100%;
+          margin: 0;
+          padding: 5px;
+
+          .el-date-table {
+            tr {
+              th {
+                color: $black-color;
+              }
+            }
+
+            .el-date-table__row {
+              .available {
+                .el-date-table-cell {
+                  color: $black-200;
+                }
+              }
+
+              .current {
+                .el-date-table-cell {
+                  .el-date-table-cell__text {
+                    background: $blue;
+                  }
+                }
+              }
+
+              .disabled {
+                cursor: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .el-popper__arrow {
+    display: none;
+  }
+
+  .cell {
+    height: 64px;
+    box-sizing: border-box;
+
+    .text {
+      width: 24px;
+      height: 24px;
+      display: block;
+      margin: 0 auto;
+      line-height: 24px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+    }
+
+    .icon {
+      width: 24px;
+      height: 26px;
+      display: block;
+      margin: 0 auto;
+      line-height: 24px;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 50%;
+    }
+  }
+
+  .cell.current .text {
+    background: $blue;
+    color: $white-color;
+  }
+
+  .cell.current-booking {
+    background: #d9ecff;
+  }
+}

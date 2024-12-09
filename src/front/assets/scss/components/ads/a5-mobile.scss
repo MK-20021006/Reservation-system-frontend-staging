@@ -1,0 +1,28 @@
+@use "./ads-non-fixed.scss";
+@use "~/../../src/front/assets/scss/variables.scss" as *;
+@use "~/../../src/shared/assets/scss/element/index.scss" as *;
+@use "element-plus/theme-chalk/src/mixins/mixins" as *;
+@use "./ads-image.scss";
+
+@include res("md-and-down", $breakpoints-spec) {
+  .external-ads {
+    .external-ads__Mobile {
+      .el-carousel {
+        .el-carousel__container {
+          .el-carousel__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .ads__content {
+              width: 320px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

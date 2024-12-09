@@ -1,0 +1,126 @@
+/* color-default */
+$primary-background-color: #434343;
+$primary-text-color: #ffffff;
+$primary-dark-text-color: #646464;
+$primary-background-active-color: #cc81b2;
+$green-color: #19be6b;
+$green-100: #529B2E;
+$warning-color: #ff9900;
+$danger-color: #f5222d;
+$info-color: #17233d;
+$focus-border: #d798c1;
+$grey-color: #5a5a5a;
+$grey-small-color: #e4e4e4;
+$grey-light-color: #e3e2e2;
+$grey-medium-color: #cdcdcd;
+$grey-low-color: #EFEFEF;
+$grey-50: #e6e6e6;
+$blue-link: #79bbff;
+$white-color: #ffffff;
+$lightsteelblue-color: #b0c4de;
+$white-30: #ffffff4d;
+$white-20: #ffffff33;
+/* color-used */
+$black-color: #000000;
+$black-100: #2a2a2a;
+$black-90: #000000e6;
+$black-80: #000000cc;
+$black-60: #00000099;
+$black-40: #00000066;
+$black-26: #00000042;
+$black-20: #00000033;
+
+$black-10: #0000001a;
+$black-200: #1D2129;
+$black-15: #606266;
+$black-5: rgba(0, 0, 0, 0.1);
+$black-85: rgba(0, 0, 0, 0.8);
+$black-200: #131414;
+$black-title: #595960;
+
+$gray-color: #878786;
+$gray-100: #E7E7E7;
+$gray-200: #F4F5F6;
+$gray-300: #DCDCDC;
+$gray-400: #F6F6F6;
+$gray-500: #E0E5ED;
+$gray-600: #F5F5F5;
+$gray-20: #f5f5f533;
+$gray-700: #E5E6EB;
+$gray-800: #4e4e4e;
+$gray-900: #F4F4F4;
+$gray-10: #C0C4CC;
+$gray-80: #EEEEEE;
+$gray-110: #cccccc;
+
+$gray-50: #E4E7ED;
+
+$yellow-color: #b4985c;
+$yellow-medium-color: #8a6d3b;
+$yellow-low-color: #B4985C;
+$yellow-40: rgba(180, 152, 92, 0.2);
+$yellow-30: #E0DCCC;
+$yellow-50: #0000FF;
+
+$red: #8A6D3B;
+$red-color: #c03522;
+$red-color-icon: #F56C6C;
+$red-30: #c035224d;
+$red-40: #F15454;
+$red-50: #F15454;
+$border-notice: #e8e8e8;
+
+$orange: #FC8837;
+
+$teal: #666666;
+
+$line-color: #0000001a;
+
+$pink-color: #999999;
+$btn-red: #C03522;
+
+$blue: #347AE2;
+$blue-100: #0052D9;
+$blue-medium: #0066CC;
+$blue-color: #1a76d2;
+$blue-70: #1a76d2;
+$blue-80: #385898;
+$blue-90: #07519A;
+
+$bg-main-user: #F6F6F6;
+$title-red: #8A6D3B;
+
+$border-table: #DBDBDB;
+
+/* font size */
+$primary-font-size: 14px;
+
+// sidebar
+$menuText: #303133;
+$menuActiveText: white;
+
+$menuBg: #0071BC;
+$menuHover: #2C778D;
+
+$sideBarWidth: 232px;
+$height-item: 40px;
+$minWidth: 1200px;
+
+$background-logo: #66686c;
+$background-header-top: #3a3a3a;
+$background-logo: #2d2d2d;
+$color-header-top: #ffffff;
+$color-header-tab: #ffffff;
+$background-header-tab: #333333;
+$background-tab: #2d2d2d;
+$color-tab-item: #b4985c;
+$bg-active-calender: #347AE2; //TODO
+$hover-calender: #0c41ff; //TODO
+
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  sideBarWidth: $sideBarWidth;
+}

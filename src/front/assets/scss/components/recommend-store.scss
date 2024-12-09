@@ -1,0 +1,21 @@
+.animation__backToRight {
+  animation-name: backToRight;
+  animation-iteration-count: initial;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-duration: 3.5s;
+}
+
+@keyframes backToRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

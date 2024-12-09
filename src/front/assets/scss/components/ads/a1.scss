@@ -1,0 +1,10 @@
+@use "./ads-fixed.scss";
+@use "~/../../src/front/assets/scss/variables.scss" as *;
+@use "~/../../src/shared/assets/scss/element/index.scss" as *;
+@use "element-plus/theme-chalk/src/mixins/mixins" as *;
+
+@include res("md-and-down", $breakpoints-spec) {
+  .external-ads {
+    margin-bottom: 32px;
+  }
+}

@@ -1,0 +1,54 @@
+@use "~/../../src/front/assets/scss/variables.scss" as *;
+@use "~/../../src/shared/assets/scss/element/index.scss" as *;
+@use "element-plus/theme-chalk/src/mixins/mixins" as *;
+
+.external-ads {
+  .external-ads__PC {
+    display: block;
+
+    .external-ads__side {
+      .ads {
+        width: 100%;
+        height: 100%;
+
+        .ads__content {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .external-ads__Mobile {
+    display: none;
+  }
+}
+
+@include res("md-and-down", $breakpoints-spec) {
+  .external-ads {
+    .external-ads__PC {
+      display: none;
+    }
+
+    .external-ads__Mobile {
+      display: block;
+      width: 100%;
+      height: 50px;
+
+      .el-carousel {
+        .el-carousel__container {
+          .el-carousel__item {
+            .ads__content {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

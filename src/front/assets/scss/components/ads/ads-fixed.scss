@@ -1,0 +1,83 @@
+@use "~/../../src/front/assets/scss/variables.scss" as *;
+@use "~/../../src/shared/assets/scss/element/index.scss" as *;
+@use "element-plus/theme-chalk/src/mixins/mixins" as *;
+@use "./ads-image.scss";
+
+.external-ads {
+  .external-ads__PC {
+    .external-ads__side {
+      position: fixed;
+      z-index: 2025;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .ads {
+        position: relative;
+        transform: translateY(64px);
+        width: 160px;
+        height: 600px;
+
+        .ads__content {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          @extend a;
+        }
+
+        // .btn-close {
+        //   position: absolute;
+        //   top: -7px;
+        //   right: -2px;
+        //   width: 10px;
+        //   height: 10px;
+        //   cursor: pointer;
+        // }
+      }
+    }
+
+    .a1,
+    .a2 {
+      height: 100vh;
+      top: 0vh;
+      left: 0px;
+    }
+  }
+
+  .external-ads__Mobile {
+    display: none;
+  }
+}
+
+@include res("md-and-down", $breakpoints-spec) {
+  .external-ads {
+    .external-ads__PC {
+      display: none;
+    }
+
+    .external-ads__Mobile {
+      display: block;
+      width: 100%;
+      height: 50px;
+
+      .el-carousel {
+        .el-carousel__container {
+          .el-carousel__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .ads__content {
+              width: 320px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

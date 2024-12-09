@@ -1,0 +1,1 @@
+export const TIME_CHANGE_BANNER_ADS = 5000;

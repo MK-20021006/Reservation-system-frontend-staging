@@ -1,0 +1,19 @@
+<template>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect x="2.5" y="2.5" width="15" height="15" rx="7.5" stroke="#b4985c" />
+    <rect
+      x="5.92857"
+      y="5.92847"
+      width="8.14286"
+      height="8.14286"
+      rx="4.07143"
+      stroke="#b4985c"
+    />
+  </svg>
+</template>

@@ -1,0 +1,27 @@
+@use "./ads-non-fixed.scss";
+@use "~/../../src/front/assets/scss/variables.scss" as *;
+@use "~/../../src/shared/assets/scss/element/index.scss" as *;
+@use "element-plus/theme-chalk/src/mixins/mixins" as *;
+@use "./ads-image.scss";
+
+.external-ads {
+  .external-ads__PC {
+    .a5,
+    .a6,
+    .a7,
+    .a8 {
+      width: 220px;
+      height: 220px;
+
+      @extend a;
+    }
+  }
+}
+
+@include res("md-and-down", $breakpoints-spec) {
+  .external-ads {
+    .external-ads__PC {
+      display: none;
+    }
+  }
+}
