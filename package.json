@@ -1,0 +1,49 @@
+{
+  "private": true,
+  "scripts": {
+    "build:store": "nuxt build src/store",
+    "build:front": "nuxt build src/front",
+    "build:admin": "nuxt build src/admin",
+    "dev:store": "nuxt dev src/store -p 3000",
+    "dev:front": "nuxt dev src/front -p 3001",
+    "dev:admin": "nuxt dev src/admin -p 3002",
+    "generate": "nuxt generate",
+    "preview:store": "nuxt preview src/store -p 3000",
+    "preview:front": "nuxt preview src/front -p 3001",
+    "preview:admin": "nuxt preview src/admin -p 3002",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext .ts,.js,.vue .",
+    "lintfix": "eslint --fix --ext .ts,.js,.vue ."
+  },
+  "devDependencies": {
+    "@intlify/nuxt3": "^0.2.4",
+    "@pinia/nuxt": "^0.4.2",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.5.1",
+    "nuxt": "3.0.0",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.0.2",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@types/sortablejs": "^1.15.0",
+    "animate.css": "^4.1.1",
+    "echarts": "^5.4.0",
+    "el-table-infinite-scroll": "^3.0.1",
+    "element-plus": "^2.2.26",
+    "mitt": "^3.0.0",
+    "moment": "^2.29.4",
+    "pinia": "^2.0.29",
+    "pinia-plugin-persistedstate": "^3.0.1",
+    "sortablejs": "^1.15.0",
+    "vue-echarts": "^6.2.3"
+  }
+}

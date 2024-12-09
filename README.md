@@ -1,1 +1,1 @@
-# Reservation-system
+# Gic Reservation Management System
